@@ -1,0 +1,190 @@
+body,html{
+  border:0;padding:0;margin:0;
+  width:1366px;
+  height:701px;
+}
+body{
+}
+canvas{
+  position:absolute;
+  left: 0;top:0;
+z-index: 10;
+
+}
+.di{
+  position:absolute;
+  left: 0;top:0;
+  width:100%;height:69%;
+  z-index: 2;
+  background:url("../img/city.png") repeat-x;
+  background-size: 100%;
+  border-bottom:57px solid rgba(0,0,0,.9);
+}
+.di1{
+  position:absolute;
+  left: 0;top:0;
+  width:100%;height:69%;
+  background:url("../img/background.png") repeat-x;
+  background-size: 100%;
+  z-index: 1;
+}
+.di2{
+  position:absolute;
+  left: 0;top:0;
+  z-index: 3;
+
+  width:100%;height:100%;
+  background:rgba(0,0,0,.3)
+}
+.di3{
+  position:absolute;
+  z-index: 9;
+  left: 0;bottom:0;
+  width:100%;height:23%;
+  background: #000;
+}
+.control{
+  position:absolute;
+  right:3%;top:20px;
+  z-index:999;
+  color:#fff;
+  width:120px;
+  display: flex;
+  justify-content:space-between;
+}
+.control>div{
+  cursor:pointer;
+}
+.icon-yinliang {
+  display: block;
+  margin:-2px 1px 0 0;
+}
+
+.life{
+  position: absolute;
+  bottom:8%;left:6%;
+  z-index: 999;
+}
+.life>span{
+  color:red;
+  font-size: 48px;
+}
+.score{
+  position: absolute;
+  z-index: 9;
+  font-size: 40px;
+  color: #fff;
+  bottom: 50px;
+  right: 140px;
+}
+.start,.over{
+  position: absolute;
+  top:0;left:0;right:0;bottom:0;
+  margin:auto;
+  width:300px;
+  height: 200px;
+  background:rgba(255,255,255,.7);
+  border-radius:10px;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  z-index: 10;
+  opacity: 1;
+  -webkit-transform:scale(1);
+  transform:scale(1);
+  -webkit-transition:all .5s ease;
+  transition:all .5s ease;
+}
+.over{
+  opacity:0;
+  -webkit-transform:scale(0);
+  transform:scale(0);
+}
+.over.active{
+  opacity: 1;
+  -webkit-transform:scale(1);
+  transform:scale(1);
+}
+.start.active{
+  opacity: 0;
+  -webkit-transform:scale(0);
+  transform:scale(0);
+}
+
+.start input,.start button,.over button{
+  display: block;
+  outline:none;
+  border:3px solid #000;
+  width:200px;
+  height:50px;
+  padding:10px;
+  margin: 30px auto 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius:5px;
+  font-size: 20px;
+  opacity: 1;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.start button {
+  border: 0;
+  background: #6684ff;
+  color:#fff;
+
+}
+
+.over button{
+  border: 0;
+  background: #ff2525;
+  color:#fff;
+  margin:10px auto 0;
+}
+
+.start .shuzi span{
+  position: absolute;
+  top:0;left:0;right:0;bottom:0;
+  margin:auto;
+  line-height: 200px;
+  text-align: center;
+  font-size: 100px;
+  color:#666;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+
+.over {
+  height: 330px;
+  padding:20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+.over ul{
+  height: 160px;
+  padding:0;margin:0;list-style: none;
+}
+.over li{
+  overflow: hidden;
+  padding:0;margin:0;list-style: none;
+  line-height: 25px;
+}
+.over li >div{
+  float:left;
+  width:150px;
+}
+.over li >div:first-child {
+
+  width:100px;
+  border-right:1px solid #000;
+}
+.over>div:nth-child(1){
+  font-size: 30px;
+}
+.over>div:nth-child(2) {
+  padding: 10px 0 5px;
+  font-size: 18px;
+
+}
