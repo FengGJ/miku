@@ -37,7 +37,6 @@ $(function () {
 
             num++;
             if(num>=4){
-                console.log(num)
                 $(".start").toggleClass("active");
                 flag=false;
                 clearInterval(tt);
@@ -51,7 +50,6 @@ $(function () {
         },1000)
 
         if(!flag){
-            console.log(num)
             return false;
         }
 

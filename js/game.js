@@ -381,7 +381,6 @@ game.prototype = {
     fengshu: function (val) {
         $(".score span").text(val);
         if (val > this.scorenum * 1500) {
-            console.log(this.scorenum)
             this.scorenum++;
 
             if (this.fntime < 14) {
@@ -416,58 +415,6 @@ game.prototype = {
         this.syFlag = false;
         this.mflag = false;
     }
-    /*again:function(canvas, cobj, runs, jump, di, background, hinderImg, hua, cong, huaxing, jumpa, pengzhuang,bg){
-     this.canvas = canvas;
-
-
-     this.huaxing = huaxing;
-     this.pengzhuang = pengzhuang;
-     this.jumpa = jumpa;
-     this.bg=bg;
-
-     this.cobj = cobj;
-     this.hinderImg = hinderImg;
-     this.canvasw = canvas.width;
-     this.canvash = canvas.height;
-     this.di = di;
-     this.background = background;
-     this.cong = cong;
-     this.hua = hua;
-
-     this.person = new person(canvas, cobj, runs, jump, di, background, hua);
-     this.bullet = new bullet(canvas, cobj, cong);
-     this.person.y=420;
-
-
-     this.hinderArr = [];//用数组保存障碍物
-     this.isfire = false;
-     this.score = 0;
-
-     this.scoreflag = true;
-
-     this.syFlag=true;
-
-     this.flag = true;
-
-     this.num = 0;
-     this.back = 0;
-     this.backnum = 0;
-
-     this.palyFlag=true;
-
-
-
-
-
-     this.mflag=true;
-
-
-     this.rand = (2 + Math.ceil(Math.random())) * 1000;
-
-
-     this.move();
-
-     }*/
 }
 
 //障碍物       确定 宽高，位置，每次移动的距离
