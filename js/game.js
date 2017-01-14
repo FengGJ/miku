@@ -349,7 +349,6 @@ game.prototype = {
     },
     zt: function (val) {
         if (this.palyFlag) {
-            console.log()
             clearInterval(this.ptime);
             clearInterval(this.t);
             clearInterval(this.t1);
@@ -378,11 +377,11 @@ game.prototype = {
     },
     xuetiao: function () {
         $(".life span:last-child").remove();
-
     },
     fengshu: function (val) {
         $(".score span").text(val);
         if (val > this.scorenum * 1500) {
+            console.log(this.scorenum)
             this.scorenum++;
 
             if (this.fntime < 14) {
@@ -413,9 +412,9 @@ game.prototype = {
         this.pengzhuang.pause();
         this.jumpa.pause();
         this.bg.pause();
-        this.palyFlag = flase;
-        this.syFlag = flase;
-        this.mflag = flase;
+        this.palyFlag = false;
+        this.syFlag = false;
+        this.mflag = false;
     }
     /*again:function(canvas, cobj, runs, jump, di, background, hinderImg, hua, cong, huaxing, jumpa, pengzhuang,bg){
      this.canvas = canvas;

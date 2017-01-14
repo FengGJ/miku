@@ -25,29 +25,39 @@ $(function () {
 
     var gameplay= new game(canvas,cobj,runs,jump,di,di1,hinderImg,hua,cong,huaxing,jumpa,pengzhuang,bg);
     var flag=true;
-    // gameplay.person();
-    var messages = localStorage.messages ? JSON.parse(localStorage.messages) : [];
-    console.log(messages)
 
-    $(".start button").click(()=>{
+    $(".start button").one("click",()=>{
         $(".start input").css("opacity","0");
         $(".start button").css("opacity","0");
         var num=1;
         var name= $(".start input").val();
         $(".shuzi span").css({"opacity":1,"z-index": -1});
-        var t =setInterval(()=>{
+        var tt =setInterval(function () {
+
+
             num++;
-            console.log($(".shuzi span"))
             if(num>=4){
+                console.log(num)
                 $(".start").toggleClass("active");
-                clearTimeout(t);
+                flag=false;
+                clearInterval(tt);
                 gameplay.play(name);
             }else{
                 $(".shuzi span").text(num)
 
             }
 
+
         },1000)
+
+        if(!flag){
+            console.log(num)
+            return false;
+        }
+
+        setTimeout(function () {
+
+        },0)
     })
 
     var val=0;
