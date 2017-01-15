@@ -70,7 +70,7 @@ function game(canvas, cobj, runs, jump, di, background, hinderImg, hua, cong, hu
     this.ptime;
     this.t1;
     this.t;
-
+    this.t2;
 
     this.mflag = true;
 
@@ -86,7 +86,7 @@ function game(canvas, cobj, runs, jump, di, background, hinderImg, hua, cong, hu
 game.prototype = {
 
     play: function (name) {
-
+        btime="1";
         this.name = name;
         var that = this;
         this.ptime = setInterval(function () {
@@ -359,6 +359,8 @@ game.prototype = {
             this.palyFlag = val;
             this.syFlag = val;
             this.mflag = val;
+            clearInterval(btime);
+
         } else {
             this.ptime = setInterval(()=> {
                 this.move();
@@ -414,6 +416,7 @@ game.prototype = {
         this.palyFlag = false;
         this.syFlag = false;
         this.mflag = false;
+        clearInterval(btime);
     }
 }
 
@@ -499,7 +502,7 @@ blood.prototype = {
     }
 }
 
-function bloods(cobj, x, y) {
+function bloods(cobj, x, y,t2) {
     var arr = [];
     for (var i = 0; i < 30; i++) {
         var xue = new blood(cobj);
@@ -509,7 +512,7 @@ function bloods(cobj, x, y) {
 
     }
     var that = this;
-    var t1 = setInterval(function () {
+    btime = setInterval(function () {
         for (var i = 0; i < arr.length; i++) {
             arr[i].draw();
 
@@ -519,7 +522,7 @@ function bloods(cobj, x, y) {
             }
         }
         if (arr.length == 0) {
-            clearInterval(t1);
+            clearInterval(btime);
         }
 
     }, 50)
